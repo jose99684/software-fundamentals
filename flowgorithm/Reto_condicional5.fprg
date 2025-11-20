@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional5"/>
+        <attribute name="authors" value="JOSE ESTIVEN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 11:25:12 p.&#160;m."/>
+        <attribute name="created" value="Sk9TRSBFU1RJVkVOO0pPU0VfRVNUSVZFTjsyMDI1LTExLTE1OzEwOjAxOjA1IHAuwqBtLjszNDA1"/>
+        <attribute name="edited" value="Sk9TRSBFU1RJVkVOO0pPU0VfRVNUSVZFTjsyMDI1LTExLTE1OzExOjI1OjEyIHAuwqBtLjsyOzM1MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="id" type="String" array="False" size=""/>
+            <declare name="firstName" type="String" array="False" size=""/>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="gender" type="String" array="False" size=""/>
+            <declare name="birth" type="String" array="False" size=""/>
+            <declare name="adress" type="String" array="False" size=""/>
+            <declare name="phone" type="Integer" array="False" size=""/>
+            <declare name="salary" type="Integer" array="False" size=""/>
+            <declare name="increase" type="Real" array="False" size=""/>
+            <output expression="&quot;Document (CC, PS, CE, CI)&quot;" newline="True"/>
+            <output expression="&quot;Type document: &quot;" newline="True"/>
+            <input variable="id"/>
+            <output expression="&quot;First Name: &quot;" newline="True"/>
+            <input variable="firstName"/>
+            <output expression="&quot;Last Name: &quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;Gender: &quot;" newline="True"/>
+            <input variable="gender"/>
+            <output expression="&quot;Year of birth: &quot;" newline="True"/>
+            <input variable="birth"/>
+            <output expression="&quot;Adress: &quot;" newline="True"/>
+            <input variable="adress"/>
+            <output expression="&quot;Phone: &quot;" newline="True"/>
+            <input variable="phone"/>
+            <output expression="&quot;Salary: &quot;" newline="True"/>
+            <input variable="salary"/>
+            <if expression="salary &lt;= 1200000">
+                <then>
+                    <if expression="gender = &quot;mujer&quot;">
+                        <then>
+                            <assign variable="increase" expression="(salary*3)/100"/>
+                            <output expression="&quot;hola &quot;&amp;firstName&amp;&quot; &quot;&amp;lastName&amp;&quot; su salario aumento el 3%, su salario es: &quot;&amp;(salary+increase)" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="increase" expression="(salary*8)/100"/>
+                            <output expression="&quot;hola &quot;&amp;firstName&amp;&quot; &quot;&amp;lastName&amp;&quot; su salario aumento el 8%, su salario es: &quot;&amp;(salary+increase)" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="salary &gt; 12000000 and salary &lt; 20000000">
+                        <then>
+                            <assign variable="increase" expression="(salary*5)/100"/>
+                            <output expression="&quot;hola &quot;&amp;firstName&amp;&quot; &quot;&amp;lastName&amp;&quot; su salario aumento el 5%, su salario es: &quot;&amp;(salary+increase)" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="gender = &quot;mujer&quot;">
+                                <then>
+                                    <assign variable="increase" expression="(salary*3)/100"/>
+                                    <output expression="&quot;hola &quot;&amp;firstName&amp;&quot; &quot;&amp;lastName&amp;&quot; su salario aumento el 3%, su salario es: &quot;&amp;(salary+increase)" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="increase" expression="(salary*2.5)/100"/>
+                                    <output expression="&quot;hola &quot;&amp;firstName&amp;&quot; &quot;&amp;lastName&amp;&quot; su salario aumento el 2.5%, su salario es: &quot;&amp;(salary+increase)" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
