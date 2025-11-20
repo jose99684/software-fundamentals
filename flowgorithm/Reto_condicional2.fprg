@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional2"/>
+        <attribute name="authors" value="JOSE ESTIVEN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 09:32:23 p.&#160;m."/>
+        <attribute name="created" value="Sk9TRSBFU1RJVkVOO0pPU0VfRVNUSVZFTjsyMDI1LTExLTE1OzA4OjEzOjIzIHAuwqBtLjszNDE1"/>
+        <attribute name="edited" value="Sk9TRSBFU1RJVkVOO0pPU0VfRVNUSVZFTjsyMDI1LTExLTE1OzA5OjMyOjIzIHAuwqBtLjsxOzM1MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number: &quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="Abs(number) % 2 = 0">
+                <then>
+                    <output expression="&quot;Number &quot;&amp;number&amp;&quot; is even.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Number &quot;&amp;number&amp;&quot; is odd.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
