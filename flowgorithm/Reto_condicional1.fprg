@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional1"/>
+        <attribute name="authors" value="JOSE ESTIVEN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 08:12:56 p.&#160;m."/>
+        <attribute name="created" value="Sk9TRSBFU1RJVkVOO0pPU0VfRVNUSVZFTjsyMDI1LTExLTE1OzA3OjE4OjM4IHAuwqBtLjszNDI1"/>
+        <attribute name="edited" value="Sk9TRSBFU1RJVkVOO0pPU0VfRVNUSVZFTjsyMDI1LTExLTE1OzA4OjEyOjU2IHAuwqBtLjsyOzM1Mjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Define variables or constants&#13;&#10;"/>
+            <declare name="die1" type="Integer" array="False" size=""/>
+            <declare name="die2" type="Integer" array="False" size=""/>
+            <comment text="Process"/>
+            <assign variable="die1" expression="Random(6)+1"/>
+            <assign variable="die2" expression="Random(6)+1"/>
+            <output expression="&quot;Die 1: &quot;&amp;die1" newline="True"/>
+            <output expression="&quot;Die 2: &quot;&amp;die2" newline="True"/>
+            <if expression="die1 = die2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
