@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional3"/>
+        <attribute name="authors" value="ARCHIVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 01:07:52 p.&#8239;m."/>
+        <attribute name="created" value="QVJDSElWTztQQy0xMzAxNDQ1OzIwMjUtMTEtMTk7MTI6NTY6MDMgcC7igK9tLjsxMDc0Nw=="/>
+        <attribute name="edited" value="QVJDSElWTztQQy0xMzAxNDQ1OzIwMjUtMTEtMTk7MDE6MDc6NTIgcC7igK9tLjsxOzEwODUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter your number: &quot;" newline="True"/>
+            <input variable="number"/>
+            <if expression="number&gt;=0">
+                <then>
+                    <if expression="Abs(number)%2=0">
+                        <then>
+                            <output expression="&quot;Your number &quot;&amp;number&amp;&quot; PAR POSITIVO&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Your number &quot;&amp;number&amp;&quot; IMPAR POSITIVO&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="Abs(number)%2=0">
+                        <then>
+                            <output expression="&quot;Your number &quot;&amp;number&amp;&quot; PAR NEGATIVO&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Your number &quot;&amp;number&amp;&quot; IMPAR NEGATIVO&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
