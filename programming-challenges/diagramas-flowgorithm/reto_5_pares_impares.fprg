@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="Reto5_ParesImpares"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value="Contar pares e impares en N lanzamientos"/>
+        <attribute name="saved" value="2024-01-01 12:00:00"/>
+        <attribute name="created" value="2024-01-01 12:00:00"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantidad" type="Integer" array="False" size=""/>
+            <declare name="pares" type="Integer" array="False" size=""/>
+            <declare name="impares" type="Integer" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;=== RETO 5: Contar pares e impares ===&quot;" newline="True"/>
+            <output expression="&quot;¿Cuántos lanzamientos desea efectuar?&quot;" newline="True"/>
+            <input variable="cantidad"/>
+            <assign variable="pares" expression="0"/>
+            <assign variable="impares" expression="0"/>
+            <for variable="i" start="1" end="cantidad" direction="inc" step="1">
+                <assign variable="numero" expression="Random(6) + 1"/>
+                <output expression="&quot;Lanzamiento &quot; &amp; i &amp; &quot;: &quot; &amp; numero" newline="True"/>
+                <if expression="numero % 2 == 0">
+                    <then>
+                        <assign variable="pares" expression="pares + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="impares" expression="impares + 1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;=== RESULTADOS ===&quot;" newline="True"/>
+            <output expression="&quot;Total de PARES: &quot; &amp; pares" newline="True"/>
+            <output expression="&quot;Total de IMPARES: &quot; &amp; impares" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
