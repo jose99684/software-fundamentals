@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="Reto4_DobleSeis"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value="Lanzar hasta obtener doble seis"/>
+        <attribute name="saved" value="2024-01-01 12:00:00"/>
+        <attribute name="created" value="2024-01-01 12:00:00"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="intentos" type="Integer" array="False" size=""/>
+            <declare name="continuar" type="Boolean" array="False" size=""/>
+            <output expression="&quot;=== RETO 4: Lanzar hasta doble seis ===&quot;" newline="True"/>
+            <assign variable="intentos" expression="0"/>
+            <assign variable="continuar" expression="True"/>
+            <while expression="continuar">
+                <assign variable="intentos" expression="intentos + 1"/>
+                <assign variable="dado1" expression="Random(6) + 1"/>
+                <assign variable="dado2" expression="Random(6) + 1"/>
+                <output expression="&quot;Intento &quot; &amp; intentos &amp; &quot;: Dado1=&quot; &amp; dado1 &amp; &quot; Dado2=&quot; &amp; dado2" newline="True"/>
+                <if expression="dado1 == 6 AND dado2 == 6">
+                    <then>
+                        <assign variable="continuar" expression="False"/>
+                        <output expression="&quot;¡DOBLE SEIS! Conseguido en &quot; &amp; intentos &amp; &quot; intentos&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
