@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="Reto6_LanzamientosOpcion"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value="Lanzamientos con opción de continuar"/>
+        <attribute name="saved" value="2024-01-01 12:00:00"/>
+        <attribute name="created" value="2024-01-01 12:00:00"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalTiros" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="pares" type="Integer" array="False" size=""/>
+            <declare name="impares" type="Integer" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="continuar" type="String" array="False" size=""/>
+            <output expression="&quot;=== RETO 6: Lanzamientos con opción ===&quot;" newline="True"/>
+            <assign variable="totalTiros" expression="0"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="pares" expression="0"/>
+            <assign variable="impares" expression="0"/>
+            <assign variable="continuar" expression="&quot;S&quot;"/>
+            <while expression="continuar == &quot;S&quot; OR continuar == &quot;s&quot;">
+                <assign variable="totalTiros" expression="totalTiros + 1"/>
+                <assign variable="numero" expression="Random(6) + 1"/>
+                <assign variable="suma" expression="suma + numero"/>
+                <output expression="&quot;Lanzamiento &quot; &amp; totalTiros &amp; &quot;: &quot; &amp; numero" newline="True"/>
+                <if expression="numero % 2 == 0">
+                    <then>
+                        <assign variable="pares" expression="pares + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="impares" expression="impares + 1"/>
+                    </else>
+                </if>
+                <output expression="&quot;¿Desea volver a lanzar? (S/N)&quot;" newline="True"/>
+                <input variable="continuar"/>
+            </while>
+            <output expression="&quot;=== REPORTE FINAL ===&quot;" newline="True"/>
+            <output expression="&quot;Total de tiros efectuados: &quot; &amp; totalTiros" newline="True"/>
+            <output expression="&quot;Suma total de los tiros: &quot; &amp; suma" newline="True"/>
+            <output expression="&quot;Total de pares generados: &quot; &amp; pares" newline="True"/>
+            <output expression="&quot;Total de impares generados: &quot; &amp; impares" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
