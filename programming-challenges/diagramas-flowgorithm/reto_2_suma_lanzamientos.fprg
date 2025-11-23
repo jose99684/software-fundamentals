@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="Reto2_SumaLanzamientos"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value="Suma de N lanzamientos de dados"/>
+        <attribute name="saved" value="2024-01-01 12:00:00"/>
+        <attribute name="created" value="2024-01-01 12:00:00"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantidad" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;=== RETO 2: Suma de N lanzamientos ===&quot;" newline="True"/>
+            <output expression="&quot;¿Cuántas veces desea lanzar el dado?&quot;" newline="True"/>
+            <input variable="cantidad"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="contador" start="1" end="cantidad" direction="inc" step="1">
+                <assign variable="numero" expression="Random(6) + 1"/>
+                <output expression="&quot;Lanzamiento &quot; &amp; contador &amp; &quot;: &quot; &amp; numero" newline="True"/>
+                <assign variable="suma" expression="suma + numero"/>
+            </for>
+            <output expression="&quot;Suma total de los valores: &quot; &amp; suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
